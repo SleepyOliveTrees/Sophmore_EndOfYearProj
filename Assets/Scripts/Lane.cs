@@ -29,9 +29,12 @@ public class Lane : MonoBehaviour
             if (note.NoteName == noteRestriction)
             {
                 var metricTimeSpan = TimeConverter.ConvertTo<MetricTimeSpan>(note.Time, SongManager.midiFile.GetTempoMap());
-                timeStamps.Add((double)metricTimeSpan.Minutes * 60f + metricTimeSpan.Seconds + (double)metricTimeSpan.Milliseconds / 1000f);
+                double timeInSeconds = metricTimeSpan.TotalMicroseconds / 1_000_000.0;
+                timeStamps.Add(timeInSeconds);
+                Debug.Log($"Lane {noteRestriction}: Note at {timeInSeconds:F3} seconds (MIDI time: {note.Time})");
             }
         }
+        timeStamps.Sort();
     }
 
     // Update is called once per frame
@@ -71,18 +74,18 @@ public class Lane : MonoBehaviour
             if (timeStamp + marginOfError <= audioTime)
             {
                 Miss();
-                print($"Missed {inputIndex} note");
+                //print($"Missed {inputIndex} note");
                 inputIndex++;
             }
-            }
         }
-
-        private void Hit()
-        {
-            ScoreManager.Hit();
     }
-       private void Miss()
-        {
-            ScoreManager.Miss();
+
+    private void Hit()
+    {
+        ScoreManager.Hit();
+    }
+    private void Miss()
+    {
+        ScoreManager.Miss();
     }
 }

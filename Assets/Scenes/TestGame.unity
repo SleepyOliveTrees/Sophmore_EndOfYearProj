@@ -324,7 +324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b764b54e6d688fd499a27e8209b0ddec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteRestriction: 0
+  noteRestriction: 2
   input: 102
   notePrefab: {fileID: 1254749879432519177, guid: f493c0e014df75247b483900bca2cfdd, type: 3}
   timeStamps: []
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitSFX: {fileID: 1632340759}
-  missSFX: {fileID: 1632340759}
+  missSFX: {fileID: 548744855}
   scoreText: {fileID: 88264091}
 --- !u!4 &129030243
 Transform:
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b764b54e6d688fd499a27e8209b0ddec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteRestriction: 0
+  noteRestriction: 4
   input: 106
   notePrefab: {fileID: 5528840736720950280, guid: 1aef2a2bc5173244fb9347b6aec39e55, type: 3}
   timeStamps: []
@@ -948,7 +948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b764b54e6d688fd499a27e8209b0ddec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  noteRestriction: 0
+  noteRestriction: 5
   input: 107
   notePrefab: {fileID: 6378092032261509257, guid: d1b5e6c0728031a4e85e7601d3e1eeb3, type: 3}
   timeStamps: []
@@ -1090,11 +1090,11 @@ MonoBehaviour:
   - {fileID: 265589415}
   - {fileID: 846904517}
   songDelayInSeconds: 0
-  marginOfError: 0.1
-  inputDelayInMiliseconds: 0
+  marginOfError: 0.12
+  inputDelayInMiliseconds: 50
   fileLocation: happy_birthday.mid
   noteTime: 1
-  noteSpawnY: 7
+  noteSpawnY: 3
   noteTapY: -3
 --- !u!4 &960414228
 Transform:

@@ -82,6 +82,12 @@ public class SongManager : MonoBehaviour
         var array = new Melanchall.DryWetMidi.Interaction.Note[notes.Count];
         notes.CopyTo(array, 0);
 
+        // Debug: Log all notes loaded from the MIDI file
+        foreach (var note in array)
+        {
+            Debug.Log($"Note: {note.NoteName}{note.Octave}, Time: {note.Time}, Length: {note.Length}");
+        }
+
         foreach (var lane in lanes)
         {
             lane.SetTimeStamps(array);

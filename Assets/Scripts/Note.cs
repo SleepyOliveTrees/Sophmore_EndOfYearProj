@@ -4,27 +4,41 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    double timeInstantiated;
     public float assignedTime;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
-        timeInstantiated = SongManager.GetAudioSourceTime();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            Debug.LogError("SpriteRenderer not found on Note prefab!");
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        double timeSinceInstantiated = SongManager.GetAudioSourceTime() - timeInstantiated;
-        float t = (float)(timeSinceInstantiated / (SongManager.Instance.noteTime * 2));
+        float songTime = (float)SongManager.GetAudioSourceTime();
+        float timeToHit = assignedTime - songTime;
+        float totalTravelTime = SongManager.Instance.noteTime;
 
-        if (t > 1) {
+        // Calculate t and clamp between 0 and 1 for safety
+        float t = Mathf.Clamp01(1f - (timeToHit / totalTravelTime));
+
+        if (t >= 1f)
+        {
+            print(t);
             Destroy(gameObject);
         }
         else
         {
-            transform.localPosition = Vector3.Lerp(Vector3.up * SongManager.Instance.noteSpawnY, Vector3.up * SongManager.Instance.noteDespawnY, t);
-            GetComponent<SpriteRenderer>().enabled = true;
+            // Only update the Y position, keep X/Z from the lane
+            Vector3 pos = transform.localPosition;
+            pos.y = Mathf.Lerp(SongManager.Instance.noteSpawnY, SongManager.Instance.noteDespawnY, t);
+            transform.localPosition = pos;
+
+            if (spriteRenderer != null)
+                spriteRenderer.enabled = true;
         }
     }
 }
