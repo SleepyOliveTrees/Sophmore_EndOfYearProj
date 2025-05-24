@@ -1,44 +1,50 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Note : MonoBehaviour
 {
-    public float assignedTime;
-    private SpriteRenderer spriteRenderer;
-
+    public double timeInstantiated;
+    public double assignedTime;
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        if (spriteRenderer == null)
-        {
-            Debug.LogError("SpriteRenderer not found on Note prefab!");
-        }
+        timeInstantiated = SongManager.GetAudioSourceTime();
     }
 
     void Update()
     {
-        float songTime = (float)SongManager.GetAudioSourceTime();
-        float timeToHit = assignedTime - songTime;
-        float totalTravelTime = SongManager.Instance.noteTime;
+        //double timeSinceInstantiated = SongManager.GetAudioSourceTime() - timeInstantiated;
+        //float t = (float)(timeSinceInstantiated / (SongManager.Instance.noteTime * 2));
 
-        // Calculate t and clamp between 0 and 1 for safety
-        float t = Mathf.Clamp01(1f - (timeToHit / totalTravelTime));
 
-        if (t >= 1f)
+        //if (t > 1)
+        //{
+        //    Destroy(gameObject);
+        //}
+        //else
+        //{
+        //    transform.localPosition = Vector3.Lerp(Vector3.up * SongManager.Instance.noteSpawnY, Vector3.up * SongManager.Instance.noteDespawnY, t);
+        //    GetComponent<SpriteRenderer>().enabled = true;
+        //}
+
+        double currentTime = SongManager.GetAudioSourceTime();
+        double timeToHit =  currentTime - timeInstantiated;
+        float totalTravelTime = SongManager.Instance.noteTime * 2;
+
+        float t = (float)(timeToHit / totalTravelTime);
+
+        if (t > 1)
         {
-            print(t);
             Destroy(gameObject);
         }
         else
         {
+            print($"Note {timeInstantiated} - Time to hit: {timeToHit:F3} seconds, t: {t:F3}");
             // Only update the Y position, keep X/Z from the lane
-            Vector3 pos = transform.localPosition;
-            pos.y = Mathf.Lerp(SongManager.Instance.noteSpawnY, SongManager.Instance.noteDespawnY, t);
-            transform.localPosition = pos;
+            transform.localPosition = Vector3.Lerp(Vector3.up * SongManager.Instance.noteSpawnY, Vector3.up * SongManager.Instance.noteDespawnY, t);
 
-            if (spriteRenderer != null)
-                spriteRenderer.enabled = true;
+            GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }

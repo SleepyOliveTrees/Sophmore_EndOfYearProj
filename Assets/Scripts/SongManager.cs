@@ -35,6 +35,8 @@ public class SongManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        Application.targetFrameRate = 60; // Force 60 FPS for smoother note movement
+
         Instance = this;
         if (Application.streamingAssetsPath.StartsWith("http://") || Application.streamingAssetsPath.StartsWith("https://"))
         {
@@ -44,8 +46,6 @@ public class SongManager : MonoBehaviour
         {
             ReadFromFile();
         }
-
-
     }
 
     private void ReadFromFile()
@@ -88,10 +88,7 @@ public class SongManager : MonoBehaviour
             Debug.Log($"Note: {note.NoteName}{note.Octave}, Time: {note.Time}, Length: {note.Length}");
         }
 
-        foreach (var lane in lanes)
-        {
-            lane.SetTimeStamps(array);
-        }
+        foreach (var lane in lanes) lane.SetTimeStamps(array);
 
         Invoke(nameof(StartSong), songDelayInSeconds);
     }
@@ -103,7 +100,7 @@ public class SongManager : MonoBehaviour
 
     public static double GetAudioSourceTime()
     {
-        return Instance.audioSource.timeSamples / Instance.audioSource.clip.frequency;
+        return (double)Instance.audioSource.timeSamples / Instance.audioSource.clip.frequency;
     }
 
     // Update is called once per frame

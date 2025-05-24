@@ -1089,12 +1089,12 @@ MonoBehaviour:
   - {fileID: 102548560}
   - {fileID: 265589415}
   - {fileID: 846904517}
-  songDelayInSeconds: 0
-  marginOfError: 0.12
+  songDelayInSeconds: 0.2
+  marginOfError: 0.3
   inputDelayInMiliseconds: 50
   fileLocation: happy_birthday.mid
   noteTime: 1
-  noteSpawnY: 3
+  noteSpawnY: 7
   noteTapY: -3
 --- !u!4 &960414228
 Transform:
