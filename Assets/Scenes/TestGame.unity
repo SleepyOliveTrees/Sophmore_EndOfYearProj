@@ -326,7 +326,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteRestriction: 2
   input: 102
-  notePrefab: {fileID: 1254749879432519177, guid: f493c0e014df75247b483900bca2cfdd, type: 3}
+  notePrefab: {fileID: 996327809334896192, guid: 85a2b887d60cca84a80f83b197fe05bd, type: 3}
   timeStamps: []
 --- !u!4 &102548561
 Transform:
@@ -422,8 +422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 4
-  input: 106
-  notePrefab: {fileID: 5528840736720950280, guid: 1aef2a2bc5173244fb9347b6aec39e55, type: 3}
+  input: 103
+  notePrefab: {fileID: 5733628118908247821, guid: a23ae8fded3f99342aa2761fc50c8644, type: 3}
   timeStamps: []
 --- !u!4 &265589416
 Transform:
@@ -835,6 +835,54 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &567643222
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 567643224}
+  - component: {fileID: 567643223}
+  m_Layer: 0
+  m_Name: Lane5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &567643223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567643222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b764b54e6d688fd499a27e8209b0ddec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteRestriction: 7
+  input: 106
+  notePrefab: {fileID: 7467666264070606956, guid: 45b63074cefd2bd4d8fb1a46653a9991, type: 3}
+  timeStamps: []
+--- !u!4 &567643224
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 567643222}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 0.020273648}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,8 +997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   noteRestriction: 5
-  input: 107
-  notePrefab: {fileID: 6378092032261509257, guid: d1b5e6c0728031a4e85e7601d3e1eeb3, type: 3}
+  input: 104
+  notePrefab: {fileID: 6349747122235244307, guid: d70a531fc8be1b449ba335dcd237b029, type: 3}
   timeStamps: []
 --- !u!4 &846904518
 Transform:
@@ -1107,6 +1155,54 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.0046287, y: -2.2370522, z: 0.020273648}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1049696100
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1049696102}
+  - component: {fileID: 1049696101}
+  m_Layer: 0
+  m_Name: Lane6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1049696101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049696100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b764b54e6d688fd499a27e8209b0ddec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noteRestriction: 9
+  input: 107
+  notePrefab: {fileID: 1426728964098048259, guid: ab3855b19ee1af1409fa51bf64cc630d, type: 3}
+  timeStamps: []
+--- !u!4 &1049696102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049696100}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3, y: 0, z: 0.020273648}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1271,7 +1367,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   noteRestriction: 0
   input: 100
-  notePrefab: {fileID: 5443550848325034699, guid: d4fbe66f0baccee4db4de2160653d9b5, type: 3}
+  notePrefab: {fileID: 4683547817484606973, guid: f643a872ac0ff1048b7c330a218c90ed, type: 3}
   timeStamps: []
 --- !u!4 &1966030243
 Transform:
@@ -1300,6 +1396,8 @@ SceneRoots:
   - {fileID: 102548561}
   - {fileID: 265589416}
   - {fileID: 846904518}
+  - {fileID: 567643224}
+  - {fileID: 1049696102}
   - {fileID: 864553222}
   - {fileID: 129030243}
   - {fileID: 88264093}
