@@ -1,19 +1,26 @@
 using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
 
-public class songselector : MonoBehaviour
+public class SongSelector : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    //Use this for initialization
-    void Start()
+    public static SongSelector Instance;
+    public Songs selectedSong;
+
+   //Runs before any start method
+    private void Awake()
     {
-        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    public void OpenScene()
+    public void SelectedSong(Songs song)
     {
-        SceneManager.LoadScene("TestGame");
+        selectedSong = song;
     }
 }

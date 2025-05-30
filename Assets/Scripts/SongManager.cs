@@ -17,7 +17,7 @@ public class SongManager : MonoBehaviour
     public double marginOfError; // in seconds
     public int inputDelayInMiliseconds;
 
-    public string fileLocation;
+    //public string fileLocation;
     public float noteTime;
     public float noteSpawnY;
     public float noteTapY;
@@ -38,25 +38,33 @@ public class SongManager : MonoBehaviour
         Application.targetFrameRate = 60; // Force 60 FPS for smoother note movement
 
         Instance = this;
+
+        //Get the selected song from  SongSelector
+        Songs selectedSong = SongSelector.Instance.selectedSong;
+
+        //Assign the song's audio file to the audio source so it can be played
+        audioSource.clip = selectedSong.audioFile;
+
         if (Application.streamingAssetsPath.StartsWith("http://") || Application.streamingAssetsPath.StartsWith("https://"))
         {
-            StartCoroutine(ReadFromWebsite());
+            StartCoroutine(ReadFromWebsite(selectedSong.midiFile));
         }
         else
         {
-            ReadFromFile();
+            ReadFromFile(selectedSong.midiFile);
         }
     }
 
-    private void ReadFromFile()
+    //need parameter to get midiFile of the selected song for both ReadFromFile and ReadFromWebsite
+    private void ReadFromFile(string mFile)
     {
-        midiFile = MidiFile.Read(Application.streamingAssetsPath + "/" + fileLocation);
+        midiFile = MidiFile.Read(Application.streamingAssetsPath + "/" + mFile);
         GetDataFromMidi();
     }
 
-    private IEnumerator ReadFromWebsite()
+    private IEnumerator ReadFromWebsite(string mFile)
     {
-        using (UnityWebRequest www = UnityWebRequest.Get(Application.streamingAssetsPath + "/" + fileLocation))
+        using (UnityWebRequest www = UnityWebRequest.Get(Application.streamingAssetsPath + "/" + mFile))
         {
             yield return www.SendWebRequest();
             
