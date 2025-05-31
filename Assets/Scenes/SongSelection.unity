@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Song One
+  m_text: 'Indian Classical
 
     by: Avneet Kaur'
   m_isRightToLeft: 0
@@ -640,7 +640,6 @@ GameObject:
   - component: {fileID: 451116647}
   - component: {fileID: 451116646}
   - component: {fileID: 451116645}
-  - component: {fileID: 451116648}
   m_Layer: 5
   m_Name: Song Selector 5
   m_TagString: Untagged
@@ -750,19 +749,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 451116643}
   m_CullTransparentMesh: 1
---- !u!114 &451116648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451116643}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8655f4bf6b5143821fffd3eb3fe57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songSelected: {fileID: 0}
 --- !u!1 &517729154
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +797,6 @@ GameObject:
   - component: {fileID: 705201326}
   - component: {fileID: 705201325}
   - component: {fileID: 705201324}
-  - component: {fileID: 705201327}
   m_Layer: 5
   m_Name: Song Selector 6
   m_TagString: Untagged
@@ -921,19 +906,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705201322}
   m_CullTransparentMesh: 1
---- !u!114 &705201327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705201322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8655f4bf6b5143821fffd3eb3fe57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songSelected: {fileID: 0}
 --- !u!1 &867110516
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,7 +1057,6 @@ GameObject:
   - component: {fileID: 937543143}
   - component: {fileID: 937543142}
   - component: {fileID: 937543145}
-  - component: {fileID: 937543146}
   m_Layer: 5
   m_Name: Song Selector 1
   m_TagString: Untagged
@@ -1219,20 +1190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9036645169776d4f9e42bd58f67765d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songList: []
---- !u!114 &937543146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937543140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8655f4bf6b5143821fffd3eb3fe57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songSelected: {fileID: 0}
 --- !u!1 &946903453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1907,7 +1864,6 @@ GameObject:
   - component: {fileID: 1454598129}
   - component: {fileID: 1454598128}
   - component: {fileID: 1454598127}
-  - component: {fileID: 1454598131}
   m_Layer: 5
   m_Name: Song Selector 4
   m_TagString: Untagged
@@ -1947,7 +1903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9036645169776d4f9e42bd58f67765d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  songList: []
 --- !u!114 &1454598128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2042,19 +1997,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454598125}
   m_CullTransparentMesh: 1
---- !u!114 &1454598131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454598125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8655f4bf6b5143821fffd3eb3fe57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songSelected: {fileID: 0}
 --- !u!1 &1477825857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2602,7 +2544,6 @@ GameObject:
   - component: {fileID: 2033236877}
   - component: {fileID: 2033236876}
   - component: {fileID: 2033236875}
-  - component: {fileID: 2033236878}
   m_Layer: 5
   m_Name: Song Selector 3
   m_TagString: Untagged
@@ -2712,19 +2653,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2033236873}
   m_CullTransparentMesh: 1
---- !u!114 &2033236878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2033236873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8655f4bf6b5143821fffd3eb3fe57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songSelected: {fileID: 0}
 --- !u!1 &2045922917
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,7 +2665,6 @@ GameObject:
   - component: {fileID: 2045922921}
   - component: {fileID: 2045922920}
   - component: {fileID: 2045922919}
-  - component: {fileID: 2045922922}
   m_Layer: 5
   m_Name: Song Selector 2
   m_TagString: Untagged
@@ -2847,19 +2774,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045922917}
   m_CullTransparentMesh: 1
---- !u!114 &2045922922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2045922917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd8655f4bf6b5143821fffd3eb3fe57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songSelected: {fileID: 11400000, guid: b6cc99d3de1abf14cbaf8d4d7c50a2ed, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
