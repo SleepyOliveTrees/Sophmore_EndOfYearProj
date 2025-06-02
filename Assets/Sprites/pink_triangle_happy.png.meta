@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pink_triangle_happy_0: 7311699783271799192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
