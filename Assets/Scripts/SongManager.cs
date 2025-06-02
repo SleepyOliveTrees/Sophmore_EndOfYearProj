@@ -11,11 +11,16 @@ using System;
 public class SongManager : MonoBehaviour
 {
     public static SongManager Instance;
-    public AudioSource audioSource;
+    //public AudioSource audioSource;
     public Lane[] lanes;
     public float songDelayInSeconds;
     public double marginOfError; // in seconds
     public int inputDelayInMiliseconds;
+
+    public SongDatabase songDB;
+    public AudioSource audioSource;
+    public MidiFile midiFile;
+    private int selectedOption;
 
     public string fileLocation;
     public float noteTime;
@@ -30,14 +35,36 @@ public class SongManager : MonoBehaviour
     }
 
     // this is where the MIDIfile loads on RAM (I think...)
-    public static MidiFile midiFile;
+    //public static MidiFile midiFile;
+
+    //Run before start to avoid errora
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Application.targetFrameRate = 60; // Force 60 FPS for smoother note movement
 
-        Instance = this;
+        //Instance = this;
+        selectedOption = PlayerPrefs.GetInt("SelectedSongIndex", 0); //Gets the sored song index
+        updateSong();
+
+    }
+
+    public void updateSong()
+    {
+        Song song = songDB.GetSong(selectedOption);
+        if(songDB == null)
+        {
+            Debug.LogError("Invalid: Song is missing.");
+            return;
+        }
+        audioSource.clip = song.audioClip;
+        fileLocation = song.midiFile;
+
         if (Application.streamingAssetsPath.StartsWith("http://") || Application.streamingAssetsPath.StartsWith("https://"))
         {
             StartCoroutine(ReadFromWebsite());
@@ -46,6 +73,7 @@ public class SongManager : MonoBehaviour
         {
             ReadFromFile();
         }
+
     }
 
     private void ReadFromFile()
@@ -78,6 +106,7 @@ public class SongManager : MonoBehaviour
 
     public void GetDataFromMidi()
     {
+        MidiFile midiFile = SongManager.Instance.midiFile;
         var notes = midiFile.GetNotes();
         var array = new Melanchall.DryWetMidi.Interaction.Note[notes.Count];
         notes.CopyTo(array, 0);
@@ -103,9 +132,4 @@ public class SongManager : MonoBehaviour
         return (double)Instance.audioSource.timeSamples / Instance.audioSource.clip.frequency;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

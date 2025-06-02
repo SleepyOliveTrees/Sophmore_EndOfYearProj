@@ -2,18 +2,24 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class songselector : MonoBehaviour
+public class SongSelector : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    //Use this for initialization
-    void Start()
-    {
-        
-    }
+    
+    public SongDatabase songDB;
+    public int songIndex; // Assign this in the inspector
 
-    // Update is called once per frame
-    public void OpenScene()
+    public void SelectSong()
     {
+        if (songIndex >= songDB.SongCount)
+        {
+            Debug.LogError("Invalid: Song does not exist!");
+            return;
+        }
+
+        PlayerPrefs.SetInt("SelectedSongIndex", songIndex); //Stores the selected song?
+        PlayerPrefs.Save(); //Makes sure the data will save
+
         SceneManager.LoadScene("TestGame");
     }
+
 }
