@@ -1131,7 +1131,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcdbc9ef8ffaf346ac7f9a971dd5567, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 307508061}
   lanes:
   - {fileID: 1966030242}
   - {fileID: 102548560}
@@ -1140,6 +1139,8 @@ MonoBehaviour:
   songDelayInSeconds: 0.2
   marginOfError: 0.3
   inputDelayInMiliseconds: 50
+  songDB: {fileID: 11400000, guid: 05d46b05f62365344a0f8c9c0719104a, type: 2}
+  audioSource: {fileID: 307508061}
   fileLocation: happy_birthday.mid
   noteTime: 1
   noteSpawnY: 7

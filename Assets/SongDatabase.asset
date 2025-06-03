@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1d55e5b64358944288bc97f17e00c47, type: 3}
   m_Name: SongDatabase
   m_EditorClassIdentifier: 
-  song: []
+  song:
+  - audioClip: {fileID: 8300000, guid: b03dd95886bbfda47a3e5ef048e55d34, type: 3}
+    midiFile: happy_birthday.mid

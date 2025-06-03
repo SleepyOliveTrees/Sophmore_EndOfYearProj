@@ -19,7 +19,7 @@ public class SongManager : MonoBehaviour
 
     public SongDatabase songDB;
     public AudioSource audioSource;
-    public MidiFile midiFile;
+    public static MidiFile midiFile;
     private int selectedOption;
 
     public string fileLocation;
@@ -37,19 +37,13 @@ public class SongManager : MonoBehaviour
     // this is where the MIDIfile loads on RAM (I think...)
     //public static MidiFile midiFile;
 
-    //Run before start to avoid errora
-    private void Awake()
-    {
-        Instance = this;
-    }
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Application.targetFrameRate = 60; // Force 60 FPS for smoother note movement
 
-        //Instance = this;
-        selectedOption = PlayerPrefs.GetInt("SelectedSongIndex", 0); //Gets the sored song index
+        Instance = this;
+        selectedOption = PlayerPrefs.GetInt("SelectedSongIndex", 0); //Gets the stored song index
         updateSong();
 
     }
@@ -106,7 +100,6 @@ public class SongManager : MonoBehaviour
 
     public void GetDataFromMidi()
     {
-        MidiFile midiFile = SongManager.Instance.midiFile;
         var notes = midiFile.GetNotes();
         var array = new Melanchall.DryWetMidi.Interaction.Note[notes.Count];
         notes.CopyTo(array, 0);
