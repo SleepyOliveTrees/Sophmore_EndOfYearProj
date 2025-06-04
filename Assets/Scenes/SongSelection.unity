@@ -222,9 +222,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Indian Classical
+  m_text: 'Track 1
 
-    by: Avneet Kaur'
+    By: Olivia Smith'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
   m_sharedMaterial: {fileID: -7406350614515968666, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
@@ -850,7 +850,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 451116646}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 54979533}
+        m_TargetAssemblyTypeName: SongSelector, Assembly-CSharp
+        m_MethodName: SelectSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &451116646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1023,7 +1035,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 705201325}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 215430822}
+        m_TargetAssemblyTypeName: SongSelector, Assembly-CSharp
+        m_MethodName: SelectSong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &705201325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,9 +1444,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Happy Birthday
+  m_text: 'Track 3
 
-    by: Yashvi Trivedi'
+    by: Olivia Smith'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
   m_sharedMaterial: {fileID: -7406350614515968666, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
@@ -1910,7 +1934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Something
+  m_text: 'Track 2
 
     by: Olivia Smith'
   m_isRightToLeft: 0
@@ -2083,7 +2107,6 @@ GameObject:
   - component: {fileID: 1454598129}
   - component: {fileID: 1454598128}
   - component: {fileID: 1454598127}
-  - component: {fileID: 1454598131}
   m_Layer: 5
   m_Name: Song Selector 4
   m_TagString: Untagged
@@ -2170,9 +2193,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1454598127}
-        m_TargetAssemblyTypeName: songselector, Assembly-CSharp
-        m_MethodName: OpenScene
+      - m_Target: {fileID: 112319255}
+        m_TargetAssemblyTypeName: SongSelector, Assembly-CSharp
+        m_MethodName: SelectSong
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2220,20 +2243,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1454598125}
   m_CullTransparentMesh: 1
---- !u!114 &1454598131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454598125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9036645169776d4f9e42bd58f67765d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  songDB: {fileID: 0}
-  songIndex: 0
 --- !u!1 &1477825857
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,13 +2955,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1809688011}
+        m_TargetAssemblyTypeName: SongSelector, Assembly-CSharp
+        m_MethodName: SelectSong
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3095,7 +3104,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 959485605}
+      - m_Target: {fileID: 1586154498}
         m_TargetAssemblyTypeName: SongSelector, Assembly-CSharp
         m_MethodName: SelectSong
         m_Mode: 1

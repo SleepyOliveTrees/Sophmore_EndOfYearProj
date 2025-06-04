@@ -15,3 +15,9 @@ MonoBehaviour:
   song:
   - audioClip: {fileID: 8300000, guid: b03dd95886bbfda47a3e5ef048e55d34, type: 3}
     midiFile: happy_birthday.mid
+  - audioClip: {fileID: 8300000, guid: a9c83d37adae95b4389f7bf25d0334c6, type: 3}
+    midiFile: Track_1.mid
+  - audioClip: {fileID: 8300000, guid: ee3b58138dd065641b84deace48cd947, type: 3}
+    midiFile: Track_2.mid
+  - audioClip: {fileID: 8300000, guid: c17debd7282d2fd4abba59700fe37794, type: 3}
+    midiFile: Track_3.mid
