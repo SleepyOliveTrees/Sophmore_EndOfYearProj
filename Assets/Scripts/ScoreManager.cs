@@ -10,7 +10,9 @@ public class ScoreManager : MonoBehaviour
     public TMPro.TextMeshPro scoreText;
     public TMPro.TextMeshPro comboText;
     static int comboScore;
-    static int score;
+    private static int score;
+    private static int hitCount;
+    private static int missCount;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -21,12 +23,14 @@ public class ScoreManager : MonoBehaviour
     
     public static void Hit()
     {
+        hitCount++;
         score += 1 + comboScore;
         comboScore += 1;
         Instance.hitSFX.Play();
     }
     public static void Miss()
     {
+        missCount++;
         comboScore = 0;
         Instance.missSFX.Play();
     }
@@ -37,4 +41,8 @@ public class ScoreManager : MonoBehaviour
         scoreText.text = score.ToString();
         comboText.text = "x" + comboScore.ToString();
     }
+
+    public static int GetScore() { return score; }
+    public static int GetHitCount() { return hitCount; }
+    public static int GetMissCount() { return missCount; }
 }
