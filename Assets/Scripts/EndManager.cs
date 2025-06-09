@@ -14,10 +14,12 @@ public class EndManager : MonoBehaviour
     void Start()
     {
         EndPanel.SetActive(false);
+        Debug.Log(SongManager.Instance.audioSource.clip.length);
         songTimer = SongManager.Instance.audioSource.clip.length;
+        Debug.Log(songTimer);   
     }
 
-
+    
 
     // Update is called once per frame
     void Update()
