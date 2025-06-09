@@ -22,8 +22,6 @@ public class SongManager : MonoBehaviour
     public static MidiFile midiFile;
     private int selectedOption;
 
-    public static bool playing = true;
-
     public string fileLocation;
     public float noteTime;
     public float noteSpawnY;
@@ -59,7 +57,6 @@ public class SongManager : MonoBehaviour
             return;
         }
         audioSource.clip = song.audioClip;
-        audioSource.loop = false;
         fileLocation = song.midiFile;
 
         if (Application.streamingAssetsPath.StartsWith("http://") || Application.streamingAssetsPath.StartsWith("https://"))
@@ -121,16 +118,10 @@ public class SongManager : MonoBehaviour
     public void StartSong()
     {
         audioSource.Play();
-        playing = false;
     }
 
     public static double GetAudioSourceTime()
     {
         return (double)Instance.audioSource.timeSamples / Instance.audioSource.clip.frequency;
     }
-<<<<<<< Updated upstream
 }
-=======
-    
-} 
->>>>>>> Stashed changes
