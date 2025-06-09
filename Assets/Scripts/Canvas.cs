@@ -1,5 +1,7 @@
-using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Canvas : MonoBehaviour
 {
@@ -41,5 +43,15 @@ public class Canvas : MonoBehaviour
         SongManager.Instance.audioSource.UnPause();
         PausePanel.SetActive(false);
         isPaused = false;
+    }
+
+    public void OpenSelection()
+    {
+        SceneManager.LoadScene("SongSelection");
+    }
+
+    public void RetrySong()
+    {
+        SceneManager.LoadScene("TestGame");
     }
 }
