@@ -18,7 +18,7 @@ public class MainMenu : MonoBehaviour
     }
     public void OpenInstructions()
     {
-        SceneManager.LoadScene("SongSelection");
+        SceneManager.LoadScene("Instructions");
     }
 
     public void QuitGame()
