@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lemn_logo_0: 5974280380427839928
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
