@@ -21,3 +21,7 @@ MonoBehaviour:
     midiFile: Track_2.mid
   - audioClip: {fileID: 8300000, guid: c17debd7282d2fd4abba59700fe37794, type: 3}
     midiFile: Track_3.mid
+  - audioClip: {fileID: 8300000, guid: 932b39689edbe0b4bb5f7ae99d7ee6c5, type: 3}
+    midiFile: clear_day.mid
+  - audioClip: {fileID: 8300000, guid: 9fa729df94a3d30419c911d0cd861381, type: 3}
+    midiFile: cozy_coffee_house.mid
