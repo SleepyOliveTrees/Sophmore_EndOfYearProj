@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Canvas : MonoBehaviour
+public class GameCanvas : MonoBehaviour
 {
     private bool isPaused;
     public GameObject PausePanel;
@@ -44,9 +44,9 @@ public class Canvas : MonoBehaviour
         PausePanel.SetActive(false);
         isPaused = false;
     }
-
     public void OpenSelection()
     {
+        Debug.Log("OpenSelection called");
         SceneManager.LoadScene("SongSelection");
     }
 

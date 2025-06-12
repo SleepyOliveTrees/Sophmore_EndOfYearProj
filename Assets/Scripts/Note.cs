@@ -27,7 +27,7 @@ public class Note : MonoBehaviour
         }
         else
         {
-            print($"Note {timeInstantiated} - Time to hit: {timeToHit:F3} seconds, t: {t:F3}");
+            //print($"Note {timeInstantiated} - Time to hit: {timeToHit:F3} seconds, t: {t:F3}");
             // Only update the Y position, keep X/Z from the lane
             transform.localPosition = Vector3.Lerp(Vector3.up * SongManager.Instance.noteSpawnY, Vector3.up * SongManager.Instance.noteDespawnY, t);
 
