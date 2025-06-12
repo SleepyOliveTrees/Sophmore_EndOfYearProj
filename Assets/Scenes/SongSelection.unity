@@ -871,7 +871,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Public Music
+  m_text: Benjamin Tissot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
   m_sharedMaterial: {fileID: -7406350614515968666, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
@@ -1560,7 +1560,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1800493390}
   m_HandleRect: {fileID: 1800493389}
   m_Direction: 2
-  m_Value: 0.9755136
+  m_Value: 1
   m_Size: 0.4706212
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2821,7 +2821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.1087036, y: 8.010559}
+  m_AnchoredPosition: {x: 5.1087036, y: -0.0000019073486}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1038755274
@@ -3132,7 +3132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Public Music
+  m_text: Lunar Years
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
   m_sharedMaterial: {fileID: -7406350614515968666, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
@@ -3611,8 +3611,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 45.410004, y: 11.381012}
-  m_SizeDelta: {x: -305.7003, y: -66.9149}
+  m_AnchoredPosition: {x: 44.531, y: 12.334}
+  m_SizeDelta: {x: -271.4015, y: -65.0094}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543699519
 MonoBehaviour:
@@ -3634,7 +3634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Track 4
+  m_text: Clear Day
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
   m_sharedMaterial: {fileID: -7406350614515968666, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
@@ -4322,8 +4322,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 45.410004, y: 8.8}
-  m_SizeDelta: {x: -305.7003, y: -66.9149}
+  m_AnchoredPosition: {x: 55, y: 12.1556}
+  m_SizeDelta: {x: -198.26, y: -60.2037}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898279587
 MonoBehaviour:
@@ -4345,7 +4345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Track 5
+  m_text: Cozy Coffeehouse
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
   m_sharedMaterial: {fileID: -7406350614515968666, guid: caa8f02ec8642e340a4ad1755b51f88b, type: 2}
