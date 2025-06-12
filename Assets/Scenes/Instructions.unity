@@ -1754,7 +1754,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: She likes to sit under the shade if trees when it's warm and sell lemonade.
+  m_text: She likes to sit under the shade of trees when it's warm and sell lemonade.
     She's really good at making lemonade but she never accepts the compliments.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1891,7 +1891,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "There will be 6 lanes will falling notes in the song player. \nAt the
+  m_text: "There will be 6 lanes with falling notes in the song player. \nAt the
     bottom, there is a horizontal line. \n\nOnce the note hits the line, a key that
     corresponds to that lane must be hit to count as a hit or additional score.\n\nIf
     the note is not hit in time, this will count as a miss.\n\nThe score is counted
